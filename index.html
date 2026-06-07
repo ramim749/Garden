@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../assest/img/icon.png">
+  <link href="./assest/css/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Metrophobic&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>HomePage</title>
+</head>
+<body>
+  <header class="bg-primary flex flex-col  md:items-center relative  ">
+    <div class="flex flex-col items-center text-center pt-4 sm:pb-2.5  lg:pb-0">
+       <div class="img lg:w-19 lg:h-15 sm:w-14 sm:h-11">
+        <img src="../assest/img/logo.png" alt="footer" class="w-full h-full object-cover">
+      </div>
+      <span class="text-white  lg:text-[26px] md:leading-6.75 font-Philosopher  font-thin lg:mt-3  lg:tracking-[3px] sm:mt-0 sm:tracking-normal sm:text-2xl">West Ridge Garden Center LLC</span>
+     
+     </div>
+    <nav class="pt-2.5 pb-4 mt-3 border-t border-border sm:hidden lg:block">                               
+      <ul class="w-full flex lg:gap-7 md:gap-5  text-white font-Metrophobic font-normal text-base  uppercase">
+        <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Home</a></li>
+        <li><a href="#" class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Plants & Flowers</a></li>
+        <li><a href="#" class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bagged Landscape</a></li>
+        <li><a href="#" class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bulk Landscape</a></li>
+        <li><a href="#" class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">About</a></li>
+        <li><a href="#" class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="  absolute right-10 bottom-4 gap-2 sm:hidden xl:flex">
+      <i class="fa-solid fa-phone text-white translate-y-1.75"></i>
+      <a href="https://www.whatsapp.com/" class="font-Metrophobic font-normal text-lg text-white">CALL 585-637-3004</a>
+    </div>
+    <div  class="button absolute right-0 top-0 ">
+      <button id="menuBtn" class="lg:hidden sm:block mr-5 mt-3.5 mb-3.5 cursor-pointer">
+      <i class="fa-solid fa-bars text-white text-3xl sm:block lg:hidden"></i>
+    </button>
+    </div>
+  </header>
+
+
+
+<!-- Overlay -->
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-40"
+></div>
+
+<!-- Mobile Menu -->
+<div
+  id="mobileMenu"
+  class="fixed top-0 right-0 h-screen w-80 bg-primary z-50
+         transform translate-x-full
+         transition-transform duration-300 ease-in-out "
+>
+  <div class="p-6 relative">
+    <button id="closeBtn" class="text-3xl mb-6 absolute right-5 top-5 cursor-pointer w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/20 border-2 border-white transition duration-300">
+      <i class="fa-solid fa-xmark text-white text-lg"></i>
+    </button>
+
+    <div class="flex flex-col items-center text-center pt-4 sm:pb-2.5  lg:pb-0">
+       <div class="img lg:w-19 lg:h-15 sm:w-14 sm:h-11">
+        <img src="../assest/img/logo.png" alt="footer" class="w-full h-full object-cover">
+      </div>
+      <span class="text-white  lg:text-[26px] md:leading-6.75 font-Philosopher  font-thin lg:mt-3  lg:tracking-[3px] sm:mt-0 sm:tracking-normal sm:text-xl">West Ridge Garden Center LLC</span>
+     
+     </div>
+
+    <ul class="mt-10 space-y-4 text-white font-Metrophobic font-normal text-base uppercase">
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Home</a></li>
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Plants & Flowers</a></li>
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bagged Landscape</a></li>
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bulk Landscape</a></li>
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">About</a></li>
+      <li><a href="#"  class=" inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Contact</a></li>
+
+   
+    </ul>
+
+    <div class="   gap-2 flex mt-15">
+      <i class="fa-solid fa-phone text-white translate-y-1.75"></i>
+      <a href="https://www.whatsapp.com/" class=" text-base font-Metrophobic text-white inline-block relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">CALL 585-637-3004</a>
+    </div>
+  </div>
+</div>
+
+ <main>
+    <section class="bg-[url('/assest/img/hero.png')] bg-cover bg-center text-center   sm:pt-20 sm:pb-25 md:pt-25  md:pb-35 lg:pt-40  lg:pb-50 pr-4 pl-4">
+        <h1 class=" text-white  font-Philosopher  font-normal sm:text-5xl sm:leading-tight lg:text-[90px] lg:leading-21.5">Nurturing Nature in <br>
+           Brockport, NY</h1>
+
+           <div class="flex gap-5 w-full justify-center mt-8 sm:flex-col md:flex-row">
+                <a href="tel:585-637-3004" class="text-lg text-secondary bg-transparent border-4 border-white pt-4 pb-4 pl-7.5 pr-7.5 font-Metrophobic font-bold inline-block uppercase  hover:text-white transition duration-300 z-30 relative after:content-[''] after:absolute after:inset-0 after:origin-bottom  after:scale-y-100 after:bg-white  after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-y-0  after:z-10"><span class="z-40 relative transition-all duration-300">contact us</span></a>
+            <a href="tel:585-637-3004" class="text-lg text-white bg-transparent border-4 border-white pt-4 pb-4 pl-7.5 pr-7.5 font-Metrophobic font-bold inline-block uppercase  hover:text-secondary transition duration-300 z-30 relative after:content-[''] after:absolute after:inset-0 after:origin-bottom  after:scale-y-0 after:bg-white  after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-y-100  after:z-10"><span class="z-40 relative transition-all duration-300">CALL 585-637-3004</span></a>
+  
+           </div>
+       
+    </section>
+    <section>
+      <div class="bg-primary grid  sm:grid-cols-1 lg:grid-cols-2 justify-around ">
+        <div class="bg-[url('/assest/img/outdoor-speace.png')] bg-cover bg-center w-full h-full text-center flex items-center justify-center sm:pt-15 sm:pb-15">
+          <h2 class="text-[90px]  text-white font-Metrophobic uppercase sm:text-4xl sm:leading-10 lg:text-[70px] lg:leading-20 xl:leading-24 xl:text-[90px]">Transform <br> Your <br> Outdoor <br> Space</h2>
+        </div>
+        <div class=" pl-31 pt-35 pb-35   sm:max-w-full   sm:pl-4 sm:pt-15 sm:pb-15 sm:pr-4 md:pl-10 md:pr-10 lg:max-w-163 lg:pl-15 lg:pt-20 lg:pb-20 lg:w-full ">
+          <p class="text-xl font-Metrophobic font-normal leading-6.75 text-white">Nestled in the heart of Brockport, NY, West Ridge Garden Center is your premier destination for all your gardening and landscaping needs. With a passion for bringing vibrant life to every outdoor space, we offer a wide selection of high-quality plants, flowers, and landscaping materials to transform your garden into a sanctuary. Whether you're a seasoned gardener or just beginning to explore the joys of gardening, our friendly experts are here to guide you every step of the way.</p>
+              <a href="tel:585-637-3004" class="text-lg text-secondary bg-transparent border-4 border-white pt-4 pb-4 pl-7.5 pr-7.5 font-Metrophobic font-bold inline-block uppercase  hover:text-white transition duration-300 z-30 relative after:content-[''] after:absolute after:inset-0 after:origin-bottom  after:scale-y-100 after:bg-white  after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-y-0  after:z-10 sm:mt-10 lg:mt-15"><span class="z-40 relative transition-all duration-300 ">contact us</span></a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid mb-18 sm:grid-cols-1 lg:grid-cols-2">
+       <div class=" sm:pr-4 sm:pl-4 sm:pt-12  lg:pl-10 lg:pt-12 lg:pb-12 lg:pr-10 xl:pl-20 xl:pt-18 xl:pb-12 xl:pr-20">
+          <h2 class="text-[90px]  leading-18.5 text-secondary font-Philosopher font-normal sm:mb-5  sm:text-4xl sm:leading-10 lg:text-[70px] lg:leading-17 lg:mb-10 xl:leading-19 xl:text-[90px]">Products for <br class="sm:hidden lg:block"> Every Garden</h2>
+        <p class="font-Metrophobic font-normal text-body text-lg leading-6.75">At West Ridge Garden Center, we take pride in offering a wide array of high-quality gardening and landscaping products to make your project come to life with ease. From vibrant plants and flowers to a comprehensive range of soil, mulch, and decorative stones, our products are carefully selected to ensure your gardening projects flourish. With everything you need in one place, our aim is to provide you with the tools and materials to achieve a garden that thrives.</p>
+            <a href="#" class="text-lg text-white bg-transparent border-4 border-secondary  pt-4 pb-4 pl-7.5 pr-7.5 font-Metrophobic font-bold inline-block uppercase  hover:text-secondary transition duration-300 z-30 relative after:content-[''] after:absolute after:inset-0 after:origin-bottom  after:scale-y-100 after:bg-secondary  after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-y-0  after:z-10 sm:mt-10 lg:mt-15"><span class="z-40 relative transition-all duration-300">learn more</span></a>
+       </div>
+       <div class=" w-full  h-full sm:mt-10 sm:max-h-100 lg:mt-0 lg:max-h-160 ">
+        <img src="../assest/img/product.png" alt="products" class="w-full h-full object-cover">
+       </div>
+      </div>
+    </section>
+
+    <div class="mb-1.5  flex justify-center sm:pt-15 sm:pb-15 lg:pt-35 lg:pb-35 bg-primary pr-4 pl-4">
+      <p class=" font-bold text-white sm:text-2xl lg:text-3xl lg:leading-9.25 max-w-215 text-center">Let our wide array of <i class="font-normal font-Philosopher">high-quality gardening</i> products inspire you to create the <span class="font-Philosopher"> outdoor space of <i class="font-normal">your dreams.</i></span></p>
+    </div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-1.5">
+     
+      <div class="item group w-full sm:h-110 md:h-135 lg:p-10 sm:p-5 flex flex-col justify-center items-center text-center relative  overflow-hidden
+         after:content-['']
+         after:absolute
+         after:inset-x-0
+         after:bottom-0
+         after:h-full
+         after:w-full
+         after:z-30
+         after:bg-body
+         after:opacity-50
+         after:origin-bottom
+         after:scale-y-[0]
+         after:transition-transform
+         after:duration-700
+         after:ease-out
+         hover:after:scale-y-100">
+         
+        <div class="img  w-full h-full absolute top-0 left-0 z-20">
+          <img src="../assest/img/service-3.png" alt="service" class="w-full h-full object-cover">
+        </div>
+        <span class="text-white font-Metrophobic font-bold z-40 sm:text-2xl  lg:text-4xl sm:leading-8 lg:leading-8.25">Blossoms & Botanicals</span>
+        <div class=" z-40 overflow-hidden max-h-0 opacity-0 translate-y-4 
+         group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0
+         transition-all duration-700 ease-in-out">
+          <p class="text-base lg:leading-6.75 font-Metrophobic font-normal sm:mt-5 sm:mb-5 sm:leading-5 lg:mt-8 lg:mb-7 text-white  ">Perfect for gardeners looking for convenience and quality, our bagged landscape supplies cover everything from nutrient-rich mulches in various colors and compositions to composts that enrich your soil. Our range also includes topsoil, potting mix, peat moss, and specialized products like composted manure and play sand, ensuring you have all the essentials for a thriving garden.</p>
+         <a href="#" class="text-lg z-40 text-secondary bg-white pt-4 pb-4 pl-7.5 pr-7.5   font-Metrophobic font-extrabold inline-block border-4 border-transparent uppercase hover:bg-transparent hover:text-white hover:border-white   transition duration-300">learn more</a>
+        </div>
+      </div>
+      <div class="item group w-full sm:h-110 md:h-135 lg:p-10 sm:p-5  flex flex-col justify-center items-center text-center relative  overflow-hidden
+         after:content-['']
+         after:absolute
+         after:inset-x-0
+         after:bottom-0
+         after:h-full
+         after:w-full
+         after:z-30
+         after:bg-body
+         after:opacity-50
+         after:origin-bottom
+         after:scale-y-[0]
+         after:transition-transform
+         after:duration-700
+         after:ease-out
+         hover:after:scale-y-100">
+         
+        <div class="img  w-full h-full absolute top-0 left-0 z-20">
+          <img src="../assest/img/service-2.png" alt="service" class="w-full h-full object-cover">
+        </div>
+        <span class="text-white  font-Metrophobic font-bold z-40 sm:text-2xl  lg:text-4xl sm:leading-8 lg:leading-8.25">Bagged Goods for <br> Lush Landscapes</span>
+        <div class=" z-40 overflow-hidden max-h-0 opacity-0 translate-y-4 
+         group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0
+         transition-all duration-700 ease-in-out">
+          <p class="text-base lg:leading-6.75 font-Metrophobic font-normal sm:mt-5 sm:mb-5 sm:leading-5 lg:mt-8 lg:mb-7 text-white  ">Perfect for gardeners looking for convenience and quality, our bagged landscape supplies cover everything from nutrient-rich mulches in various colors and compositions to composts that enrich your soil. Our range also includes topsoil, potting mix, peat moss, and specialized products like composted manure and play sand, ensuring you have all the essentials for a thriving garden.</p>
+         <a href="#" class="text-lg z-40 text-secondary bg-white pt-4 pb-4 pl-7.5 pr-7.5   font-Metrophobic font-extrabold inline-block border-4 border-transparent uppercase hover:bg-transparent hover:text-white hover:border-white   transition duration-300">learn more</a>
+        </div>
+      </div>
+      <div class="item group w-full sm:h-110 md:h-135 lg:p-10 sm:p-5 flex flex-col justify-center items-center text-center relative  overflow-hidden
+         after:content-['']
+         after:absolute
+         after:inset-x-0
+         after:bottom-0
+         after:h-full
+         after:w-full
+         after:z-30
+         after:bg-body
+         after:opacity-50
+         after:origin-bottom
+         after:scale-y-[0]
+         after:transition-transform
+         after:duration-700
+         after:ease-out
+         hover:after:scale-y-100">
+         
+        <div class="img  w-full h-full absolute top-0 left-0 z-20">
+          <img src="../assest/img/service-1.png" alt="service" class="w-full h-full object-cover">
+        </div>
+        <span class="text-white font-Metrophobic font-bold z-40 sm:text-2xl  lg:text-4xl sm:leading-8 lg:leading-8.25">Bulk Products for <br> Grand Designs</span>
+        <div class=" z-40 overflow-hidden max-h-0 opacity-0 translate-y-4 
+         group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0
+         transition-all duration-700 ease-in-out">
+          <p class="text-base lg:leading-6.75 font-Metrophobic font-normal sm:mt-5 sm:mb-5 sm:leading-5 lg:mt-8 lg:mb-7 text-white  ">Perfect for gardeners looking for convenience and quality, our bagged landscape supplies cover everything from nutrient-rich mulches in various colors and compositions to composts that enrich your soil. Our range also includes topsoil, potting mix, peat moss, and specialized products like composted manure and play sand, ensuring you have all the essentials for a thriving garden.</p>
+         <a href="#" class="text-lg z-40 text-secondary bg-white pt-4 pb-4 pl-7.5 pr-7.5   font-Metrophobic font-extrabold inline-block border-4 border-transparent uppercase hover:bg-transparent hover:text-white hover:border-white   transition duration-300">learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="relative  flex flex-col items-center text-center pr-4 pl-4  sm:pt-15 sm:pb-15 lg:pt-52 lg:pb-40">
+        <div  class="absolute left-[50%] transform -translate-x-1/2 z-10 sm:top-5 sm:max-w-50 lg:top-25 lg:max-w-96">
+          <img src="../assest/img/logo.png" alt="vector" class="w-full h-full object-cover">
+        </div>
+        <h2 class="  font-Philosopher   text-secondary font-normal z-20 sm:text-4xl sm:leading-0 lg:text-[110px] lg:leading-19  ">Who We Are</h2>
+        <p class="sm:text-base sm:leading-5.5 sm:max-w-120 lg:text-xl lg:leading-6.75 lg:max-w-180 font-Metrophobic font-normal text-body  lg:mt-22 lg:mb-21 z-20 sm:mt-8 sm:mb-10">West Ridge Garden Center is a gathering place for those who share a passion for nurturing nature and enhancing the beauty of our community through gardening. From the first spring flower to the last autumn harvest, we're dedicated to offering the finest gardening products, expert advice, and the motivation you need to see your Western NY garden flourish. Beyond simply supplying what you need, we aim to be a source of inspiration and knowledge, helping every plant in your garden reach its full potential.</p>
+           <a href="#" class="text-lg text-white bg-transparent border-4 border-secondary  pt-4 pb-4 pl-7.5 pr-7.5 font-Metrophobic font-bold inline-block uppercase  hover:text-secondary transition duration-300 z-30 relative after:content-[''] after:absolute after:inset-0 after:origin-bottom  after:scale-y-100 after:bg-secondary  after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-y-0  after:z-10 "><span class="z-40 relative transition-all duration-300">learn more</span></a>
+      </div>
+    </section>
+    <section class="bg-[url('/assest/img/banner-bg.png')] bg-cover bg-center ">
+      <div class="container relative 2xl:max-w-330 mx-auto  pr-4 pl-4 lg:pt-26 lg:pb-62.5 sm:pt-15 sm:pb-15 ">
+        <h2 class=" font-Philosopher font-normal text-white  sm:max-w-130 xl:max-w-150 sm:text-4xl sm:leading-10 lg:text-6xl lg:leading-15.75 xl:text-7xl">Discover Your Green Thumb with West Ridge Garden Center</h2>
+        <p class=" sm:text-base sm:leading-5.5 lg:text-xl lg:leading-6.75 font-Metrophobic font-normal text-white max-w-130 mt-7.5 sm:mt-5 ">As we plant our roots in Brockport, NY, West Ridge Garden Center is excited to grow alongside our community of gardening enthusiasts. We're here to support your gardening journey, from the hopeful beginnings of spring to the rewarding close of autumn, with a curated selection of products and a wealth of expert advice. Let's cultivate a greener, more vibrant space together, starting with your garden.</p>
+        <div class=" lg:absolute sm:relative sm:right-0 sm:mt-10 lg:mt-0 lg:top-0 right-25 lg:right-4 sm:max-w-110 lg:max-w-100 xl:max-w-110.5 bg-primary sm:pt-8 sm:pl-6 sm:pr-6 sm:pb-8 lg:pt-15 lg:pb-15 lg:pl-15 lg:pr-15 ">
+          <p class="text-xl leading-6.75 text-white font-normal font-Metrophobic ">Contact us at 585-637-3004 or visit our team to discover how we can help turn your gardening dreams into reality. Together, we'll make Western NY bloom.</p>
+              <a href="#" class="mt-8.5 sm:text-base lg:text-lg z-40 text-secondary bg-white pt-4 pb-4 pl-7.5 pr-7.5   font-Metrophobic font-extrabold inline-block border-4 border-transparent uppercase hover:bg-transparent hover:text-white hover:border-white   transition duration-300">learn more</a>
+        </div>
+      </div>
+    </section>
+    
+ </main>
+
+ <footer class="bg-primary">
+  <div class="container xl:max-w-6xl mx-auto  pr-4 pl-4 md:pt-20  sm:pt-10 ">
+     <div class="footer-top flex flex-col items-center text-center">
+       <div class="img w-27.5 h-21">
+        <img src="../assest/img/logo.png" alt="footer" class="w-full h-full object-cover">
+      </div>
+      <span class="text-white sm:text-3xl sm:leading-7 md:text-4xl md:leading-6.75 font-Philosopher  font-thin mt-3 tracking-widest">West Ridge Garden Center LLC</span>
+      <div class="social flex gap-6 sm:mt-6 lg:mt-13">
+        <a href="https://www.facebook.com/" class=" w-12.5 h-12.5 rounded-full bg-white flex items-center justify-center text-primary  border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition duration-300 ">
+          <i class="fa-brands fa-facebook-f  "></i>
+        </a>
+        <a href="https://www.google.com/maps/place/8684+W+Ridge+Rd,+Brockport,+NY+14420,+USA/@43.2386003,-77.9650435,13z/data=!4m6!3m5!1s0x89d4021ac5b73209:0x3df9153806d7972c!8m2!3d43.2368028!4d-77.9404532!16s%2Fg%2F11zcbmydh4?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" class=" w-12.5 h-12.5 rounded-full bg-white flex items-center justify-center text-primary  border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition duration-300 ">
+          <i class="fa-solid fa-location-dot"></i>
+        </a>
+      </div>
+     </div>
+     <div class="footer-menu lg:flex lg:justify-between sm:grid md:grid-cols-2 sm:grid-cols-1 sm:gap-10  sm:mt-10 md:mt-22 ">
+     <div class="item">
+       <span class="text-white text-2xl leading-5 font-Philosopher  font-normal ">Main Menu</span>
+      <ul class=" mt-3">
+        <li class="h-full"><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Home</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Plants & Flowers</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bagged Landscape</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Bulk Landscape</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">About</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Contact</a></li>
+      </ul>
+     </div>
+     <div class="item">
+       <span class="text-white text-2xl leading-5 font-Philosopher  font-normal ">Bagged Landscape</span>
+      <ul class=" mt-3">
+        <li class="h-full"><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Mulch</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Topsoil</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Compost </a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Potting Mix</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Peat Moss</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Composted Manure</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Stone & Gravel</a></li>
+        <li><a href="#" class="text-[15px] leading-0 text-white font-Metrophobic font-normal relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Play Sand</a></li>
+      </ul>
+     </div>
+     <div class="item">
+       <span class="text-white text-2xl leading-5 font-Philosopher  font-normal ">Get In Touch</span>
+      <ul class=" mt-3 max-w-45">
+        <li class="h-full"><a href="https://www.google.com/maps/place/8684+W+Ridge+Rd,+Brockport,+NY+14420,+USA/@43.2386003,-77.9650435,13.51z/data=!4m6!3m5!1s0x89d4021ac5b73209:0x3df9153806d7972c!8m2!3d43.2368028!4d-77.9404532!16s%2Fg%2F11zcbmydh4?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" class="text-[15px] leading-0 text-white font-Metrophobic font-normal -all duration-300 flex gap-3"><i class="fa-solid fa-location-dot translate-y-1"></i><span class="leading-5 relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100">8684 W Ridge Rd, Brockport, NY 14420</span> </a></li>
+        <li><a href="tel:585-637-3004" class="text-[15px] leading-0 text-white font-Metrophobic font-normal  transition-all duration-300 mt-10 flex gap-3"><i class="fa-solid fa-phone -translate-y-1.75"></i> <span class="relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100">Phone: 585-637-3004</span></a></li>
+  
+      </ul>
+     </div>
+     <div class="item">
+       <span class="text-white text-2xl leading-5 font-Philosopher  font-normal ">Hours:</span>
+        <ul class=" mt-3">
+          <li class="text-base text-white font-Metrophobic font-normal leading-5">Monday-Tuesday: <br> Closed</li>
+          <li class="text-base text-white font-Metrophobic font-normal leading-5 mt-5">Wednesday-Friday: <br> 10:00am - 6:00pm</li>
+          <li class="text-base text-white font-Metrophobic font-normal leading-5 mt-5">Saturday: <br> 9:00am - 3:00pm</li>
+          <li class="text-base text-white font-Metrophobic font-normal leading-5 mt-5">
+            Sunday: <br> 9:00am - 1:00pm</li>
+        </ul>
+      
+     </div>
+     </div>
+     <div class="footer-bottom pt-11 pb-17 mt-20 border-t   border-border sm:text-center lg:text-left">
+      <p class="font-Metrophobic font-normal text-white text-base leading-7.5">© 2026, West Ridge Garden Center LLC  | <a href="#" class=" relative   after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white
+         after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 transition-all duration-300">Privacy Policy</a> </p>
+     </div>
+  </div>
+ </footer>
+
+ <script src="./assest/js/jquery-3.7.1.min.js"></script>
+ <script src="./assest/js/tailwind.config.js"></script>
+</body>
+</html>
